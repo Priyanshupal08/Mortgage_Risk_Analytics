@@ -1,0 +1,185 @@
+/* ╔═════════════════════════════════════════════════════════════════════════╗
+   ║   FLOATING ALABASTER / OBSIDIAN PILLAR NAVIGATION                       ║
+   ╚═════════════════════════════════════════════════════════════════════════╝ */
+
+.pillar-capsule {
+  position: relative;
+  z-index: 50;
+  width: 88px;
+  height: calc(100vh - 48px);
+  margin: 24px 0 24px 24px;
+  background: var(--ceramic-white);
+  border: 1px solid var(--ceramic-border);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  box-shadow: var(--ceramic-shadow);
+  flex-shrink: 0;
+  transition: all 0.5s var(--ease-wealth);
+}
+
+/* ── Top Crest Logo ─────────────────────────────────────────────────────── */
+.pillar-logo-box {
+  margin-bottom: 64px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pillar-crest {
+  position: relative;
+  width: 48px; height: 48px;
+  border-radius: 16px;
+  background: var(--alabaster-bg);
+  border: 1px solid rgba(197,160,89,0.4);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--royal-gold);
+  box-shadow: 0 4px 16px rgba(197,160,89,0.15);
+  animation: wealth-breathe 4s ease-in-out infinite;
+  transition: background 0.5s var(--ease-wealth);
+}
+
+.pillar-crest-ring {
+  position: absolute; inset: -4px;
+  border-radius: 20px;
+  border: 1px solid rgba(197,160,89,0.3);
+  animation: pulse-wealth 3s ease-in-out infinite;
+}
+
+/* ── Navigation Track & Tabs ────────────────────────────────────────────── */
+.pillar-track {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: visible;
+  padding: 16px 16px 0;
+}
+
+.pillar-tab-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.pillar-tab {
+  width: 56px; height: 56px;
+  border-radius: 18px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink-sec);
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.3s var(--ease-wealth);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.pillar-tab:hover {
+  color: var(--ink-dark);
+  background: var(--alabaster-bg);
+  border-color: var(--border);
+  transform: translateY(-2px);
+}
+
+.pillar-active {
+  color: #FFFFFF !important;
+  background: var(--royal-gold) !important;
+  border-color: var(--royal-gold) !important;
+  box-shadow: 0 8px 20px rgba(197,160,89,0.35);
+  transform: translateY(0) scale(1.04);
+}
+
+/* ── Floating Luxury Tooltips ───────────────────────────────────────────── */
+.pillar-tooltip {
+  position: absolute;
+  left: calc(100% + 18px);
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  background: var(--ceramic-white);
+  border: 1px solid var(--ceramic-border);
+  border-radius: 14px;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--ceramic-shadow);
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  white-space: nowrap;
+  z-index: 100;
+}
+
+.pillar-tooltip.show {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.pillar-tip-label {
+  font-family: var(--ff-body);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--ink-dark);
+}
+
+.pillar-tip-tag {
+  padding: 2px 8px;
+  background: var(--royal-gold-g);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  border-radius: 6px;
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--royal-gold);
+  letter-spacing: 0.1em;
+}
+
+/* ── Bottom Section ─────────────────────────────────────────────────────── */
+.pillar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  align-items: center;
+  padding: 16px 16px 0;
+  border-top: 1px solid var(--border);
+}
+
+.pillar-profile-tab {
+  position: relative;
+  padding: 2px;
+}
+
+.pillar-avatar {
+  width: 100%; height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #D4AF37, #C5A059);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--ff-display);
+  font-weight: 700; font-size: 19px; color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(197,160,89,0.25);
+}
+
+.pillar-status-dot {
+  position: absolute;
+  top: -2px; right: -2px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--emerald-wealth);
+  border: 2px solid var(--ceramic-white);
+  box-shadow: 0 0 8px var(--emerald-wealth);
+  transition: border-color 0.5s var(--ease-wealth);
+}
+
+.pillar-logout:hover {
+  color: var(--crimson-risk);
+  background: var(--crimson-risk-g);
+  border-color: rgba(185,28,28,0.3);
+}

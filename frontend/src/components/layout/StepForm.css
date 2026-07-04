@@ -1,0 +1,97 @@
+/* ╔═════════════════════════════════════════════════════════════════════════╗
+   ║   AETHER WEALTH & RISK — STEP FORM STYLES                               ║
+   ╚═════════════════════════════════════════════════════════════════════════╝ */
+
+.step-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: 100%;
+}
+
+.form-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 0 12px;
+}
+
+.progress-step {
+  font-family: var(--ff-body);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink-muted);
+  transition: all 0.3s var(--ease-wealth);
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.progress-step.active {
+  color: var(--royal-gold);
+  transform: scale(1.05);
+}
+
+.progress-line {
+  flex: 1;
+  height: 2px;
+  background-color: var(--border);
+  margin: 0 20px;
+  transition: background-color 0.3s var(--ease-wealth);
+}
+
+.progress-line.active {
+  background-color: var(--royal-gold);
+  box-shadow: 0 0 8px rgba(197, 160, 89, 0.4);
+}
+
+.form-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.step-title {
+  font-family: var(--ff-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--ink-dark);
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+}
+
+.form-row {
+  display: flex;
+  gap: 24px;
+}
+@media (max-width: 768px) { .form-row { flex-direction: column; gap: 20px; } }
+
+/* ── Form Actions (Back & Next Step Buttons) ────────────────────────────── */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.slide-in {
+  animation: slideIn 0.35s var(--ease-wealth) forwards;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}

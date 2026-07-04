@@ -1,0 +1,885 @@
+/* ╔═════════════════════════════════════════════════════════════════════════╗
+   ║   AETHER WEALTH & RISK — DASHBOARD STYLES                               ║
+   ╚═════════════════════════════════════════════════════════════════════════╝ */
+
+.wealth-db {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-bottom: 64px;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+/* ── Editorial Wealth Header ────────────────────────────────────────────── */
+.wealth-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.wealth-crumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-family: var(--ff-mono);
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+}
+
+.crumb-brand {
+  color: var(--royal-gold);
+}
+
+.crumb-sep {
+  opacity: 0.4;
+}
+
+.crumb-current {
+  color: var(--ink-main);
+}
+
+.wealth-title {
+  font-family: var(--ff-display);
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink-dark);
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.wealth-top-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.swiss-shield-tag {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, rgba(197, 160, 89, 0.15), rgba(16, 137, 84, 0.1));
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  border-radius: 999px;
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--royal-gold);
+  letter-spacing: 0.18em;
+  box-shadow: 0 4px 12px rgba(197, 160, 89, 0.15);
+}
+
+.wealth-timebox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1px;
+  background: var(--ceramic-white);
+  border: 1px solid var(--ceramic-border);
+  padding: 8px 16px;
+  border-radius: 16px;
+  box-shadow: var(--ceramic-shadow);
+}
+
+.timebox-h {
+  font-family: var(--ff-mono);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink-dark);
+  letter-spacing: 0.04em;
+}
+
+.timebox-d {
+  font-size: 9.5px;
+  color: var(--ink-sec);
+  font-family: var(--ff-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.swiss-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 800;
+  font-family: var(--ff-mono);
+  letter-spacing: 0.12em;
+  border: 1px solid;
+  background: var(--ceramic-white);
+  box-shadow: var(--ceramic-shadow);
+}
+
+.swiss-ok {
+  border-color: rgba(16, 137, 84, 0.3);
+  color: var(--emerald-wealth);
+}
+
+.swiss-crit {
+  border-color: rgba(185, 28, 28, 0.3);
+  color: var(--crimson-risk);
+}
+
+.swiss-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 8px currentColor;
+  animation: pulse-wealth 2s ease-in-out infinite;
+}
+
+.wealth-err {
+  padding: 16px 24px;
+  background: rgba(185, 28, 28, 0.08);
+  border: 1px solid rgba(185, 28, 28, 0.3);
+  border-radius: 18px;
+  font-size: 13.5px;
+  color: var(--ink-dark);
+  box-shadow: var(--ceramic-shadow);
+}
+
+/* ═════════════════════════════════════════════════════════════════════════
+   HERO BENTO GRID ("The Alabaster Vault")
+═════════════════════════════════════════════════════════════════════════ */
+.bento-vault {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.vault-card {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vault-span-2 {
+  grid-column: span 2;
+  border-color: rgba(197, 160, 89, 0.4);
+}
+
+.vault-top-ribbon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--royal-gold), var(--emerald-wealth));
+}
+
+.vault-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.vault-lbl {
+  font-size: 11px;
+  font-family: var(--ff-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-sec);
+}
+
+.vault-tag {
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  border: 1px solid;
+}
+
+.gold-tag {
+  background: rgba(197, 160, 89, 0.1);
+  color: var(--royal-gold);
+  border-color: rgba(197, 160, 89, 0.3);
+}
+
+.emerald-tag {
+  background: rgba(16, 137, 84, 0.1);
+  color: var(--emerald-wealth);
+  border-color: rgba(16, 137, 84, 0.3);
+}
+
+.crimson-tag {
+  background: rgba(185, 28, 28, 0.1);
+  color: var(--crimson-risk);
+  border-color: rgba(185, 28, 28, 0.3);
+}
+
+.vault-num-box {
+  margin: 20px 0;
+}
+
+.vault-num {
+  font-family: var(--ff-display);
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.vault-sub-bar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.vault-sub-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vss-val {
+  font-family: var(--ff-display);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.vss-lbl {
+  font-size: 9px;
+  font-family: var(--ff-mono);
+  color: var(--ink-sec);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.vault-sep {
+  width: 1px;
+  height: 32px;
+  background: rgba(17, 24, 39, 0.08);
+}
+
+.vault-mid-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.vault-sub-text {
+  font-size: 11.5px;
+  color: var(--ink-sec);
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.vault-icon-crest {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(197, 160, 89, 0.2);
+}
+
+.vault-foot-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.vfs-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--emerald-wealth);
+}
+
+.vfs-text {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--ink-dark);
+  letter-spacing: 0.16em;
+}
+
+.vault-spark-box {
+  margin-top: auto;
+}
+
+/* ═════════════════════════════════════════════════════════════════════════
+   MAIN CONTENT GRID
+═════════════════════════════════════════════════════════════════════════ */
+.wealth-main {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  align-items: start;
+}
+
+.ledger-card {
+  padding: 0;
+  height: 64em;
+}
+
+.lc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 32px 24px;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.lc-title {
+  font-family: var(--ff-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink-dark);
+}
+
+.lc-sub {
+  font-size: 12.5px;
+  color: var(--ink-sec);
+  margin-top: 2px;
+}
+
+.swiss-beacon-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(16, 137, 84, 0.1);
+  border: 1px solid rgba(16, 137, 84, 0.3);
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(16, 137, 84, 0.15);
+}
+
+.sb-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--emerald-wealth);
+  box-shadow: 0 0 8px var(--emerald-wealth);
+  animation: pulse-wealth 1.8s infinite;
+}
+
+.sb-text {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--emerald-wealth);
+  letter-spacing: 0.14em;
+}
+
+/* ── Table ──────────────────────────────────────────────────────────────── */
+.audit-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.audit-table th {
+  padding: 16px 32px;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-sec);
+  text-align: left;
+  background: var(--alabaster-bg);
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.audit-table td {
+  padding: 20px 32px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.06);
+  transition: background 0.2s;
+}
+
+.at-row {
+  cursor: default;
+}
+
+.at-row:hover td,
+.at-row-active td {
+  background: rgba(197, 160, 89, 0.05);
+}
+
+.at-row:last-child td {
+  border-bottom: none;
+}
+
+.at-time {
+  display: block;
+  font-family: var(--ff-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-dark);
+}
+
+.at-date {
+  display: block;
+  font-size: 10.5px;
+  color: var(--ink-muted);
+  margin-top: 2px;
+  font-family: var(--ff-mono);
+  text-transform: uppercase;
+}
+
+.at-loan {
+  font-family: var(--ff-mono);
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--royal-gold);
+  letter-spacing: -0.01em;
+}
+
+/* Credit Chip */
+.credit-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 12px;
+  border: 1px solid;
+}
+
+.cc-num {
+  font-family: var(--ff-mono);
+  font-size: 13.5px;
+  font-weight: 800;
+}
+
+.cc-lbl {
+  font-size: 9px;
+  font-weight: 800;
+  font-family: var(--ff-mono);
+  letter-spacing: 0.1em;
+  opacity: 0.9;
+}
+
+.cc-exc {
+  background: rgba(16, 137, 84, 0.08);
+  color: var(--emerald-wealth);
+  border-color: rgba(16, 137, 84, 0.25);
+}
+
+.cc-good {
+  background: rgba(30, 58, 138, 0.08);
+  color: var(--sapphire-blue);
+  border-color: rgba(30, 58, 138, 0.25);
+}
+
+.cc-fair {
+  background: rgba(197, 160, 89, 0.08);
+  color: var(--royal-gold);
+  border-color: rgba(197, 160, 89, 0.25);
+}
+
+.cc-poor {
+  background: rgba(185, 28, 28, 0.08);
+  color: var(--crimson-risk);
+  border-color: rgba(185, 28, 28, 0.25);
+}
+
+/* Risk Pill */
+.risk-pill {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-family: var(--ff-mono);
+  font-size: 13px;
+  font-weight: 800;
+  border: 1px solid;
+}
+
+.rp-low {
+  background: rgba(16, 137, 84, 0.08);
+  color: var(--emerald-wealth);
+  border-color: rgba(16, 137, 84, 0.25);
+}
+
+.rp-mid {
+  background: rgba(197, 160, 89, 0.08);
+  color: var(--royal-gold);
+  border-color: rgba(197, 160, 89, 0.25);
+}
+
+.rp-high {
+  background: rgba(185, 28, 28, 0.08);
+  color: var(--crimson-risk);
+  border-color: rgba(185, 28, 28, 0.25);
+}
+
+/* Wealth Badge */
+.wealth-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 800;
+  font-family: var(--ff-mono);
+  letter-spacing: 0.12em;
+  border: 1px solid;
+}
+
+.wb-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.wb-ok {
+  background: rgba(16, 137, 84, 0.08);
+  color: var(--emerald-wealth);
+  border-color: rgba(16, 137, 84, 0.25);
+}
+
+.wb-err {
+  background: rgba(185, 28, 28, 0.08);
+  color: var(--crimson-risk);
+  border-color: rgba(185, 28, 28, 0.25);
+}
+
+.wb-warn {
+  background: rgba(197, 160, 89, 0.08);
+  color: var(--royal-gold);
+  border-color: rgba(197, 160, 89, 0.25);
+}
+
+.empty-audit {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--ink-muted);
+  font-size: 14px;
+  font-family: var(--ff-mono);
+}
+
+/* ── Right Column Matrix ────────────────────────────────────────────────── */
+.wealth-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.matrix-card {
+  padding: 32px;
+}
+
+.matrix-title {
+  font-family: var(--ff-display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink-dark);
+  margin-bottom: 2px;
+}
+
+.matrix-sub {
+  font-size: 12.5px;
+  color: var(--ink-sec);
+}
+
+/* Telemetry List */
+.telemetry-list {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tl-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tl-label {
+  font-size: 11px;
+  font-family: var(--ff-mono);
+  font-weight: 700;
+  color: var(--ink-sec);
+  flex-shrink: 0;
+}
+
+.tl-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.tl-bar-track {
+  flex: 1;
+  height: 6px;
+  background: rgba(17, 24, 39, 0.06);
+  border-radius: 999px;
+  overflow: hidden;
+  max-width: 110px;
+}
+
+.tl-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.9s cubic-bezier(.22, 1, .36, 1);
+}
+
+.tl-val {
+  font-family: var(--ff-display);
+  font-size: 19px;
+  font-weight: 800;
+  min-width: 44px;
+  text-align: right;
+}
+
+/* Tranche Grid */
+.tranche-grid {
+  height: 20em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.tg-cell {
+  background: var(--alabaster-bg);
+  border: 1px solid rgba(17, 24, 39, 0.06);
+  border-top: 3px solid var(--tg-c);
+  border-radius: 18px;
+  padding: 20px 18px;
+  transition: all 0.3s;
+}
+
+.tg-cell:hover {
+  background: var(--ceramic-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(165, 175, 195, 0.2);
+}
+
+.tg-count {
+  font-family: var(--ff-display);
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.tg-lbl {
+  font-size: 10px;
+  font-family: var(--ff-mono);
+  font-weight: 700;
+  color: var(--ink-sec);
+  margin-top: 8px;
+  letter-spacing: 0.08em;
+}
+
+/* ═════════════════════════════════════════════════════════════════════════
+   ALGORITHMIC BIAS & ANOMALY EXECUTIVE REPORT
+═════════════════════════════════════════════════════════════════════════ */
+.executive-card {
+  padding: 36px;
+  border-color: rgba(197, 160, 89, 0.4);
+}
+
+.ec-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  gap: 24px;
+}
+
+.ec-title {
+  font-family: var(--ff-display);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink-dark);
+}
+
+.ec-sub {
+  font-size: 13.5px;
+  color: var(--ink-sec);
+  margin-top: 2px;
+}
+
+.ec-status-pill {
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 800;
+  font-family: var(--ff-mono);
+  border: 1px solid;
+  white-space: nowrap;
+  letter-spacing: 0.12em;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(197, 160, 89, 0.15);
+}
+
+.ec-clean-box {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px;
+  background: rgba(16, 137, 84, 0.04);
+  border: 1px solid rgba(16, 137, 84, 0.2);
+  border-radius: 20px;
+}
+
+.ec-clean-ring {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  background: rgba(16, 137, 84, 0.1);
+  border: 1px solid rgba(16, 137, 84, 0.3);
+  box-shadow: 0 8px 24px rgba(16, 137, 84, 0.15);
+}
+
+.ec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 20px;
+}
+
+.ec-item {
+  padding: 26px;
+  border-radius: 20px;
+  background: var(--alabaster-bg);
+  border: 1px solid rgba(17, 24, 39, 0.06);
+  transition: all 0.3s;
+}
+
+.ec-item:hover {
+  background: var(--ceramic-white);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(165, 175, 195, 0.2);
+}
+
+.ec-critical {
+  border-left: 4px solid var(--crimson-risk);
+}
+
+.ec-warning {
+  border-left: 4px solid var(--royal-gold);
+}
+
+.ec-info {
+  border-left: 4px solid var(--sapphire-blue);
+}
+
+.eci-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.eci-sev {
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 9.5px;
+  font-weight: 800;
+  font-family: var(--ff-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.sev-critical {
+  background: rgba(185, 28, 28, 0.15);
+  color: var(--crimson-risk);
+  border: 1px solid rgba(185, 28, 28, 0.3);
+}
+
+.sev-warning {
+  background: rgba(197, 160, 89, 0.15);
+  color: var(--royal-gold);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+.sev-info {
+  background: rgba(30, 58, 138, 0.15);
+  color: var(--sapphire-blue);
+  border: 1px solid rgba(30, 58, 138, 0.3);
+}
+
+.eci-metric {
+  font-family: var(--ff-mono);
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--ink-dark);
+  letter-spacing: -0.02em;
+}
+
+.eci-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink-dark);
+  margin-bottom: 8px;
+  font-family: var(--ff-display);
+}
+
+.eci-msg {
+  font-size: 13px;
+  color: var(--ink-sec);
+  line-height: 1.65;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 1400px) {
+  .bento-vault {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .vault-span-2 {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 1100px) {
+  .wealth-main {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-vault {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .vault-span-2 {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .bento-vault {
+    grid-template-columns: 1fr;
+  }
+
+  .vault-span-2 {
+    grid-column: span 1;
+  }
+}

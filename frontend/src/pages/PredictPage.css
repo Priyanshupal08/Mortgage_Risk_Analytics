@@ -1,0 +1,280 @@
+/* ╔═════════════════════════════════════════════════════════════════════════╗
+   ║   AETHER WEALTH & RISK — PREDICT PAGE STYLES                            ║
+   ╚═════════════════════════════════════════════════════════════════════════╝ */
+
+.wealth-predict {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-bottom: 64px;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+/* ── Layout Grid ────────────────────────────────────────────────────────── */
+.predict-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (max-width: 1100px) {
+  .predict-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Ceramic Card Customizations ────────────────────────────────────────── */
+.form-card, .result-card {
+  padding: 36px 40px;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background: var(--ceramic-white);
+  border: 1px solid var(--ceramic-border);
+  border-radius: 24px;
+  box-shadow: var(--ceramic-shadow);
+}
+
+.form-card-ribbon {
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 4px;
+}
+.gold-ribbon    { background: linear-gradient(90deg, var(--royal-gold), #E5C17D); }
+.emerald-ribbon { background: linear-gradient(90deg, var(--emerald-wealth), #22C55E); }
+
+.card-header {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(17,24,39,0.08);
+}
+
+.card-header h2 {
+  font-family: var(--ff-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ink-dark);
+  margin-bottom: 6px;
+}
+
+.card-header p {
+  font-size: 13.5px;
+  color: var(--ink-sec);
+}
+
+.mb-md { margin-bottom: 20px; }
+.form-wrapper { flex: 1; display: flex; flex-direction: column; }
+
+/* ── Empty Result State ─────────────────────────────────────────────────── */
+.empty-result {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--alabaster-bg);
+  border: 1px solid rgba(17,24,39,0.06);
+  border-radius: 20px;
+  margin-top: 12px;
+}
+
+.empty-crest-ring {
+  width: 64px; height: 64px;
+  border-radius: 20px;
+  background: var(--ceramic-white);
+  border: 1px solid rgba(197,160,89,0.3);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 24px rgba(197,160,89,0.15);
+  animation: wealth-breathe 4s infinite ease-in-out;
+}
+
+.empty-title {
+  font-family: var(--ff-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink-dark);
+  margin-bottom: 8px;
+}
+
+.empty-sub {
+  font-size: 13px;
+  color: var(--ink-sec);
+  max-width: 320px;
+  line-height: 1.6;
+}
+
+/* ── Predicting Scanning State ──────────────────────────────────────────── */
+.predicting-state {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: var(--alabaster-bg);
+  border: 1px solid rgba(197,160,89,0.2);
+  border-radius: 20px;
+  margin-top: 12px;
+  gap: 28px;
+}
+
+.scanning-crest {
+  position: relative;
+  width: 80px; height: 80px;
+  border-radius: 24px;
+  background: var(--ceramic-white);
+  border: 1px solid rgba(197,160,89,0.4);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 12px 32px rgba(197,160,89,0.25);
+}
+
+.scanning-ring {
+  position: absolute; inset: -6px;
+  border-radius: 28px;
+  border: 1px solid rgba(197,160,89,0.4);
+  animation: pulse-wealth 2s infinite ease-in-out;
+}
+
+.scanner-bar-container {
+  width: 240px;
+  height: 6px;
+  background: rgba(17,24,39,0.06);
+  border-radius: 999px;
+  position: relative;
+  overflow: hidden;
+}
+
+.scanner-bar {
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, var(--royal-gold), transparent);
+  box-shadow: 0 0 16px var(--royal-gold);
+  animation: scan-wealth 1.6s ease-in-out infinite alternate;
+}
+
+@keyframes scan-wealth {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(300%); }
+}
+
+/* ── Prediction Results ─────────────────────────────────────────────────── */
+.prediction-results {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 12px;
+}
+
+.result-badge-container {
+  display: flex;
+  justify-content: center;
+}
+
+.wealth-decision-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 28px;
+  border-radius: 999px;
+  font-family: var(--ff-mono);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  border: 1px solid;
+  background: var(--ceramic-white);
+  box-shadow: var(--ceramic-shadow);
+}
+.wdb-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+.wealth-decision-badge.approve { border-color: rgba(16,137,84,0.3); color: var(--emerald-wealth); }
+.wealth-decision-badge.approve .wdb-dot { background: var(--emerald-wealth); box-shadow: 0 0 10px var(--emerald-wealth); }
+
+.wealth-decision-badge.reject { border-color: rgba(185,28,28,0.3); color: var(--crimson-risk); }
+.wealth-decision-badge.reject .wdb-dot { background: var(--crimson-risk); box-shadow: 0 0 10px var(--crimson-risk); }
+
+.wealth-decision-badge.review { border-color: rgba(197,160,89,0.3); color: var(--royal-gold); }
+.wealth-decision-badge.review .wdb-dot { background: var(--royal-gold); box-shadow: 0 0 10px var(--royal-gold); }
+
+.gauge-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  background: var(--alabaster-bg);
+  border-radius: 20px;
+  border: 1px solid rgba(17,24,39,0.06);
+}
+
+.probs-section {
+  padding: 24px;
+  background: var(--alabaster-bg);
+  border-radius: 20px;
+  border: 1px solid rgba(17,24,39,0.06);
+}
+
+/* Factors Section */
+.factors-section {
+  padding-top: 20px;
+  border-top: 1px solid rgba(17,24,39,0.08);
+}
+
+.factors-title {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-sec);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 16px;
+}
+
+.factors-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.factor-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--alabaster-bg);
+  padding: 14px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(17,24,39,0.06);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink-dark);
+  transition: all 0.25s;
+}
+.factor-item:hover {
+  background: var(--ceramic-white);
+  transform: translateX(4px);
+  box-shadow: 0 8px 24px rgba(165,175,195,0.15);
+  border-color: rgba(197,160,89,0.3);
+}
+
+.factor-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--royal-gold);
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(197,160,89,0.4);
+}
+
+.slide-up {
+  animation: slideUpWealth 0.5s var(--ease-wealth) forwards;
+}
+
+@keyframes slideUpWealth {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

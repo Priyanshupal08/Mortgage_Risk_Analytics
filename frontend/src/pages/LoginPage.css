@@ -1,0 +1,225 @@
+/* ═══════════════════════════════════════════════════════════
+   Login Page — Premium Obsidian & Gold UI
+═══════════════════════════════════════════════════════════ */
+
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--alabaster-bg);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.5s var(--ease-wealth);
+}
+
+/* Background effects */
+.login-page::before {
+  content: '';
+  position: absolute;
+  top: -20%; left: -10%;
+  width: 70%; height: 70%;
+  background: radial-gradient(circle, var(--royal-gold-g) 0%, transparent 70%);
+  pointer-events: none;
+  transition: all 0.5s var(--ease-wealth);
+}
+
+.login-page::after {
+  content: '';
+  position: absolute;
+  bottom: -20%; right: -10%;
+  width: 70%; height: 70%;
+  background: radial-gradient(circle, var(--emerald-wealth-g) 0%, transparent 70%);
+  pointer-events: none;
+  transition: all 0.5s var(--ease-wealth);
+}
+
+/* Theme Toggle FAB */
+.theme-toggle-fab {
+  position: absolute;
+  top: 28px; right: 28px;
+  width: 48px; height: 48px;
+  border-radius: 16px;
+  background: var(--ceramic-white);
+  border: 1px solid var(--ceramic-border);
+  color: var(--ink-dark);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100; cursor: pointer;
+  transition: all 0.4s var(--ease-wealth);
+  box-shadow: var(--ceramic-shadow);
+  overflow: hidden;
+}
+
+.theme-toggle-fab:hover {
+  transform: rotate(12deg) scale(1.08);
+  border-color: var(--royal-gold);
+  box-shadow: 0 12px 28px rgba(197,160,89,0.25);
+}
+
+.theme-toggle-fab .toggle-sun,
+.theme-toggle-fab .toggle-moon {
+  position: absolute;
+  width: 24px; height: 24px;
+  transition: all 0.5s var(--ease-wealth);
+}
+
+.theme-toggle-fab.dark .toggle-sun { transform: translateY(40px) scale(0.5); opacity: 0; }
+.theme-toggle-fab.dark .toggle-moon { transform: translateY(0) scale(1); opacity: 1; color: var(--royal-gold); }
+
+.theme-toggle-fab.light .toggle-sun { transform: translateY(0) scale(1); opacity: 1; color: #F59E0B; }
+.theme-toggle-fab.light .toggle-moon { transform: translateY(-40px) scale(0.5); opacity: 0; }
+
+/* ── Login Card ─────────────────────────────────────────────────────────── */
+.login-card {
+  width: 100%; max-width: 440px;
+  background: var(--ceramic-white);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--ceramic-border);
+  border-radius: 28px;
+  padding: 48px 44px;
+  position: relative; z-index: 10;
+  box-shadow: var(--ceramic-shadow);
+  animation: slideUpFade 0.5s var(--ease-wealth) forwards;
+  transition: all 0.5s var(--ease-wealth);
+}
+.login-card:hover { box-shadow: var(--ceramic-shadow-h); border-color: rgba(197,160,89,0.35); }
+
+/* Obsidian Vault Dark Mode Specific Overrides */
+body.dark-theme .login-page { background: #06090F; }
+body.dark-theme .login-card {
+  background: rgba(13, 18, 28, 0.85);
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.8), inset 0 1px 0 rgba(197,160,89,0.2);
+}
+
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.login-header { text-align: center; margin-bottom: 36px; }
+
+.login-logo {
+  position: relative;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 56px; height: 56px;
+  background: var(--royal-gold-g);
+  border: 1px solid rgba(197,160,89,0.3);
+  border-radius: 18px;
+  color: var(--royal-gold);
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(197,160,89,0.2);
+  animation: wealth-breathe 4s ease-in-out infinite;
+}
+.login-logo svg { width: 28px; height: 28px; }
+
+.login-logo-ring {
+  position: absolute; inset: -5px;
+  border-radius: 22px;
+  border: 1px solid rgba(197,160,89,0.35);
+  animation: pulse-wealth 3s ease-in-out infinite;
+}
+
+.login-title {
+  font-family: var(--ff-display);
+  font-size: 28px; font-weight: 800;
+  color: var(--ink-dark); margin-bottom: 8px;
+}
+
+.login-subtitle { font-size: 14px; color: var(--ink-sec); font-weight: 500; }
+
+.login-form { display: flex; flex-direction: column; gap: 22px; }
+
+.login-field { display: flex; flex-direction: column; gap: 8px; }
+
+.login-field label {
+  font-family: var(--ff-mono);
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--ink-sec);
+}
+
+.login-label-row { display: flex; justify-content: space-between; align-items: center; }
+
+.login-forgot-link {
+  font-family: var(--ff-body);
+  font-size: 12px; color: var(--royal-gold);
+  text-decoration: none; opacity: 0.85;
+  transition: all 0.2s; font-weight: 700;
+}
+.login-forgot-link:hover { opacity: 1; text-decoration: underline; }
+
+.login-input-wrap { position: relative; display: flex; align-items: center; }
+
+.login-input-icon {
+  position: absolute; left: 16px;
+  color: var(--ink-muted);
+  display: flex; align-items: center; justify-content: center;
+}
+
+.login-input {
+  width: 100%;
+  background: var(--alabaster-bg);
+  border: 1px solid rgba(17,24,39,0.1);
+  border-radius: 16px;
+  padding: 15px 16px 15px 46px;
+  color: var(--ink-dark);
+  font-family: var(--ff-body); font-size: 14px; font-weight: 500;
+  transition: all 0.25s var(--ease-wealth);
+}
+body.dark-theme .login-input {
+  background: rgba(6, 9, 15, 0.9);
+  border-color: rgba(255,255,255,0.1);
+  color: #FFFFFF;
+}
+
+.login-input:focus {
+  outline: none;
+  background: var(--ceramic-white);
+  border-color: var(--royal-gold);
+  box-shadow: 0 0 0 3px rgba(197,160,89,0.2);
+}
+body.dark-theme .login-input:focus { background: rgba(13, 18, 28, 0.95); }
+
+.login-input::placeholder { color: var(--ink-muted); opacity: 0.6; }
+
+/* ── Login Button ───────────────────────────────────────────────────────── */
+.login-btn {
+  background: var(--royal-gold);
+  color: #000000;
+  border: none;
+  border-radius: 16px;
+  padding: 16px;
+  font-family: var(--ff-body);
+  font-size: 14.5px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-wealth);
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  margin-top: 12px;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  box-shadow: 0 8px 24px rgba(197,160,89,0.3);
+}
+
+.login-btn:hover:not(:disabled) {
+  background: #E5C17D;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(197,160,89,0.45);
+}
+
+.login-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.login-footer {
+  margin-top: 36px; text-align: center;
+  font-size: 13.5px; color: var(--ink-sec); font-weight: 500;
+  border-top: 1px solid rgba(17,24,39,0.06); padding-top: 24px;
+}
+body.dark-theme .login-footer { border-color: rgba(255,255,255,0.08); }
+
+.login-footer-link {
+  color: var(--royal-gold); text-decoration: none;
+  font-weight: 700; transition: color 0.2s;
+}
+.login-footer-link:hover { text-decoration: underline; }
