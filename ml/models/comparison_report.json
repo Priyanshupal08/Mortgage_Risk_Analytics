@@ -1,0 +1,163 @@
+{
+  "winner": "XGBoost",
+  "metrics": {
+    "LogisticRegression": {
+      "accuracy": 0.794,
+      "roc_auc": 0.8697,
+      "f1": 0.787,
+      "precision": 0.7331,
+      "recall": 0.8493,
+      "cv_auc_mean": 0.8808,
+      "cv_auc_std": 0.0084,
+      "train_time_s": 0.03,
+      "optimal_threshold": 0.46,
+      "confusion_matrix": [
+        [
+          827,
+          277
+        ],
+        [
+          135,
+          761
+        ]
+      ]
+    },
+    "XGBoost": {
+      "accuracy": 0.836,
+      "roc_auc": 0.9438,
+      "f1": 0.8357,
+      "precision": 0.7582,
+      "recall": 0.9308,
+      "cv_auc_mean": 0.9403,
+      "cv_auc_std": 0.0066,
+      "train_time_s": 0.22,
+      "optimal_threshold": 0.5,
+      "confusion_matrix": [
+        [
+          838,
+          266
+        ],
+        [
+          62,
+          834
+        ]
+      ]
+    },
+    "LightGBM": {
+      "accuracy": 0.8405,
+      "roc_auc": 0.9405,
+      "f1": 0.8325,
+      "precision": 0.7859,
+      "recall": 0.885,
+      "cv_auc_mean": 0.9383,
+      "cv_auc_std": 0.0057,
+      "train_time_s": 0.13,
+      "optimal_threshold": 0.5,
+      "confusion_matrix": [
+        [
+          888,
+          216
+        ],
+        [
+          103,
+          793
+        ]
+      ]
+    },
+    "Ensemble": {
+      "accuracy": 0.8355,
+      "roc_auc": 0.9399,
+      "f1": 0.8307,
+      "precision": 0.7708,
+      "recall": 0.9007,
+      "cv_auc_mean": null,
+      "cv_auc_std": null,
+      "train_time_s": 2.59,
+      "optimal_threshold": 0.42,
+      "confusion_matrix": [
+        [
+          864,
+          240
+        ],
+        [
+          89,
+          807
+        ]
+      ]
+    }
+  },
+  "importance": {
+    "LogisticRegression": {
+      "credit_score": 31.1,
+      "annual_income": 4.8,
+      "loan_amount": 4.46,
+      "loan_term": 3.09,
+      "dti_ratio": 19.41,
+      "employment_years": 4.94,
+      "num_credit_lines": 4.57,
+      "num_derogatory_marks": 1.18,
+      "credit_utilization": 2.34,
+      "payment_history_score": 0.03,
+      "home_ownership": 0.61,
+      "purpose_encoded": 0.53,
+      "num_late_payments": 1.08,
+      "savings_balance": 2.02,
+      "monthly_expenses": 6.26,
+      "collateral_value": 13.58
+    },
+    "XGBoost": {
+      "credit_score": 66.48999786376953,
+      "annual_income": 1.3700000047683716,
+      "loan_amount": 1.1399999856948853,
+      "loan_term": 1.0499999523162842,
+      "dti_ratio": 16.700000762939453,
+      "employment_years": 1.1699999570846558,
+      "num_credit_lines": 1.090000033378601,
+      "num_derogatory_marks": 1.1100000143051147,
+      "credit_utilization": 0.9200000166893005,
+      "payment_history_score": 0.7400000095367432,
+      "home_ownership": 1.1399999856948853,
+      "purpose_encoded": 0.7200000286102295,
+      "num_late_payments": 2.059999942779541,
+      "savings_balance": 1.4199999570846558,
+      "monthly_expenses": 0.9399999976158142,
+      "collateral_value": 1.9600000381469727
+    },
+    "LightGBM": {
+      "credit_score": 12.38,
+      "annual_income": 6.27,
+      "loan_amount": 7.79,
+      "loan_term": 6.08,
+      "dti_ratio": 12.98,
+      "employment_years": 5.94,
+      "num_credit_lines": 2.45,
+      "num_derogatory_marks": 2.2,
+      "credit_utilization": 6.46,
+      "payment_history_score": 7.32,
+      "home_ownership": 0.22,
+      "purpose_encoded": 2.2,
+      "num_late_payments": 2.56,
+      "savings_balance": 7.1,
+      "monthly_expenses": 7.35,
+      "collateral_value": 10.7
+    }
+  },
+  "feature_names": [
+    "credit_score",
+    "annual_income",
+    "loan_amount",
+    "loan_term",
+    "dti_ratio",
+    "employment_years",
+    "num_credit_lines",
+    "num_derogatory_marks",
+    "credit_utilization",
+    "payment_history_score",
+    "home_ownership",
+    "purpose_encoded",
+    "num_late_payments",
+    "savings_balance",
+    "monthly_expenses",
+    "collateral_value"
+  ]
+}

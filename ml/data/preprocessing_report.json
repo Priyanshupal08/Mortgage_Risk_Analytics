@@ -1,0 +1,218 @@
+{
+  "generated_at": "2026-05-03T15:48:30.381062",
+  "original_data": {
+    "shape": [
+      150000,
+      11
+    ],
+    "null_counts": {
+      "RevolvingUtilizationOfUnsecuredLines": 0,
+      "age": 0,
+      "NumberOfTime30-59DaysPastDueNotWorse": 0,
+      "DebtRatio": 0,
+      "MonthlyIncome": 0,
+      "NumberOfOpenCreditLinesAndLoans": 0,
+      "NumberOfTimes90DaysLate": 0,
+      "NumberRealEstateLoansOrLines": 0,
+      "NumberOfTime60-89DaysPastDueNotWorse": 0,
+      "NumberOfDependents": 0,
+      "SeriousDlqin2yrs": 0
+    }
+  },
+  "splits": {
+    "train": {
+      "shape": [
+        133140,
+        16
+      ],
+      "class_balance": {
+        "class_0": 66570,
+        "class_1": 66570,
+        "ratio": 0.5
+      },
+      "null_counts": {
+        "credit_score": 0,
+        "annual_income": 0,
+        "loan_amount": 0,
+        "loan_term": 0,
+        "dti_ratio": 0,
+        "employment_years": 0,
+        "num_credit_lines": 0,
+        "num_derogatory_marks": 0,
+        "credit_utilization": 0,
+        "payment_history_score": 0,
+        "home_ownership": 0,
+        "purpose_encoded": 0,
+        "num_late_payments": 0,
+        "savings_balance": 0,
+        "monthly_expenses": 0,
+        "target": 0
+      }
+    },
+    "validation": {
+      "shape": [
+        22500,
+        16
+      ],
+      "class_balance": {
+        "class_0": 14266,
+        "class_1": 8234,
+        "ratio": 0.36595555555555553
+      },
+      "null_counts": {
+        "credit_score": 0,
+        "annual_income": 0,
+        "loan_amount": 0,
+        "loan_term": 0,
+        "dti_ratio": 0,
+        "employment_years": 0,
+        "num_credit_lines": 0,
+        "num_derogatory_marks": 0,
+        "credit_utilization": 0,
+        "payment_history_score": 0,
+        "home_ownership": 0,
+        "purpose_encoded": 0,
+        "num_late_payments": 0,
+        "savings_balance": 0,
+        "monthly_expenses": 0,
+        "target": 0
+      }
+    },
+    "test": {
+      "shape": [
+        22500,
+        16
+      ],
+      "class_balance": {
+        "class_0": 14266,
+        "class_1": 8234,
+        "ratio": 0.36595555555555553
+      },
+      "null_counts": {
+        "credit_score": 0,
+        "annual_income": 0,
+        "loan_amount": 0,
+        "loan_term": 0,
+        "dti_ratio": 0,
+        "employment_years": 0,
+        "num_credit_lines": 0,
+        "num_derogatory_marks": 0,
+        "credit_utilization": 0,
+        "payment_history_score": 0,
+        "home_ownership": 0,
+        "purpose_encoded": 0,
+        "num_late_payments": 0,
+        "savings_balance": 0,
+        "monthly_expenses": 0,
+        "target": 0
+      }
+    }
+  },
+  "feature_statistics": {
+    "credit_score": {
+      "mean": 594.8177116318599,
+      "std": 37.18618184889082,
+      "min": 407.0,
+      "max": 725.0,
+      "median": 597.0
+    },
+    "annual_income": {
+      "mean": 489996.26811272936,
+      "std": 249234.04388031672,
+      "min": 135125.88201432306,
+      "max": 1398543.9470991702,
+      "median": 435139.14259088563
+    },
+    "loan_amount": {
+      "mean": 1517365.3800630637,
+      "std": 948626.0227889672,
+      "min": 216392.06365204367,
+      "max": 8377363.125792892,
+      "median": 1280677.8036571802
+    },
+    "loan_term": {
+      "mean": 119.52088108248256,
+      "std": 107.30279713703709,
+      "min": 12.0,
+      "max": 360.0,
+      "median": 60.0
+    },
+    "dti_ratio": {
+      "mean": 0.37171509829807314,
+      "std": 0.2978958764124235,
+      "min": 0.00414728859239274,
+      "max": 1.0,
+      "median": 0.288767159817349
+    },
+    "employment_years": {
+      "mean": 25.03678567532368,
+      "std": 15.730326133331179,
+      "min": 0.0,
+      "max": 59.998049552709496,
+      "median": 23.96296828047862
+    },
+    "num_credit_lines": {
+      "mean": 9.99635933747843,
+      "std": 5.284514537105126,
+      "min": 1.0,
+      "max": 19.0,
+      "median": 10.0
+    },
+    "num_derogatory_marks": {
+      "mean": 3.2380524754681406,
+      "std": 2.3087439368494547,
+      "min": 0.0,
+      "max": 11.0,
+      "median": 3.0
+    },
+    "credit_utilization": {
+      "mean": 0.443798802683921,
+      "std": 0.3228596043057384,
+      "min": 0.005139163161672766,
+      "max": 1.0,
+      "median": 0.37257655276572377
+    },
+    "payment_history_score": {
+      "mean": 0.7301622937109883,
+      "std": 0.19239532807078788,
+      "min": 0.08333333333333337,
+      "max": 1.0,
+      "median": 0.75
+    },
+    "home_ownership": {
+      "mean": 1.6978794778812796,
+      "std": 0.4707473737071607,
+      "min": 0.0,
+      "max": 2.0,
+      "median": 2.0
+    },
+    "purpose_encoded": {
+      "mean": 1.998464394128085,
+      "std": 1.363248540613675,
+      "min": 0.0,
+      "max": 4.0,
+      "median": 2.0
+    },
+    "num_late_payments": {
+      "mean": 3.2380524754681406,
+      "std": 2.3087439368494547,
+      "min": 0.0,
+      "max": 11.0,
+      "median": 3.0
+    },
+    "savings_balance": {
+      "mean": 135985.13253879463,
+      "std": 135361.96094287475,
+      "min": 0.9432447923422672,
+      "max": 500000.0,
+      "median": 87911.80400286055
+    },
+    "monthly_expenses": {
+      "mean": 8821.777539040555,
+      "std": 6685.18979728907,
+      "min": 500.0,
+      "max": 20000.0,
+      "median": 7058.716332247335
+    }
+  }
+}
