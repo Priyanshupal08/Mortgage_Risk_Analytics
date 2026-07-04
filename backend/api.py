@@ -94,7 +94,10 @@ logger = setup_logging()
 # Response Standardization
 # =============================================================================
 
-import google.generativeai as genai
+try:
+    import google.generativeai as genai
+except ModuleNotFoundError:
+    genai = None
 
 
 # =============================================================================
@@ -106,6 +109,10 @@ def get_gemini_underwriting(application_data: dict, risk_result: dict):
     Get professional underwriting insights from Google Gemini.
     Provides a nuanced 'Expert Opinion' based on raw data and ML findings.
     """
+    if genai is None:
+        logger.warning("google-generativeai is not installed; skipping Gemini underwriting")
+        return None
+
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key or api_key == "YOUR_KEY_HERE":
         return None
