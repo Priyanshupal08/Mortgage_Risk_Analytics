@@ -421,7 +421,7 @@ CREATE TABLE decisions (
 
 ## 👨‍💻 Author
 
-# Priyanshu Pal
+### Priyanshu Pal
 Engineering Student | AI/ML Developer
 
 ---
