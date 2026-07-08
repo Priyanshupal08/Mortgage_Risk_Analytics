@@ -1,9 +1,9 @@
 import { create } from 'zustand';
 
-// Try to load initial user from localStorage
+// Try to load initial user from sessionStorage
 let initialUser = null;
 try {
-  const storedUser = localStorage.getItem('mortgage_user');
+  const storedUser = sessionStorage.getItem('mortgage_user');
   if (storedUser) {
     initialUser = JSON.parse(storedUser);
   }
@@ -14,7 +14,7 @@ try {
 export const useAppStore = create((set) => ({
   // Auth state
   user: initialUser,
-  token: localStorage.getItem('mortgage_token') || null,
+  token: sessionStorage.getItem('mortgage_token') || null,
   theme: localStorage.getItem('mortgage_theme') || 'dark',
   
   setTheme: (theme) => {
@@ -23,14 +23,14 @@ export const useAppStore = create((set) => ({
   },
   
   login: (userData, tokenData) => {
-    localStorage.setItem('mortgage_token', tokenData);
-    localStorage.setItem('mortgage_user', JSON.stringify(userData));
+    sessionStorage.setItem('mortgage_token', tokenData);
+    sessionStorage.setItem('mortgage_user', JSON.stringify(userData));
     set({ user: userData, token: tokenData });
   },
   
   logout: () => {
-    localStorage.removeItem('mortgage_token');
-    localStorage.removeItem('mortgage_user');
+    sessionStorage.removeItem('mortgage_token');
+    sessionStorage.removeItem('mortgage_user');
     set({ user: null, token: null });
   },
 

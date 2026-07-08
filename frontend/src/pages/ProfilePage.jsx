@@ -34,7 +34,7 @@ const ProfilePage = () => {
         const data = await api.me();
         setFullUser(data);
         useAppStore.setState({ user: { ...user, ...data } });
-        localStorage.setItem('mortgage_user', JSON.stringify({ ...user, ...data }));
+        sessionStorage.setItem('mortgage_user', JSON.stringify({ ...user, ...data }));
       } catch (err) {
         console.error('Failed to fetch profile:', err);
       } finally {

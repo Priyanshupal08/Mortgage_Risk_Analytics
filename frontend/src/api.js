@@ -1,7 +1,7 @@
 export const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8001';
 
 function getToken() {
-  try { return localStorage.getItem('mortgage_token'); } catch { return null; }
+  try { return sessionStorage.getItem('mortgage_token'); } catch { return null; }
 }
 
 export async function fetchApi(endpoint, options = {}) {
@@ -27,8 +27,8 @@ export async function fetchApi(endpoint, options = {}) {
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
       if (response.status === 401) {
-        localStorage.removeItem('mortgage_token');
-        localStorage.removeItem('mortgage_user');
+        sessionStorage.removeItem('mortgage_token');
+        sessionStorage.removeItem('mortgage_user');
         // Force redirect to login if not already there
         if (!endpoint.includes('/auth/me') && window.location.pathname !== '/login') {
           window.location.href = '/login';
