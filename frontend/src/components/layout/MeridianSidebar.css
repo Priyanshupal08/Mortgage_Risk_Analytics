@@ -22,7 +22,7 @@
 
 /* ── Top Crest Logo ─────────────────────────────────────────────────────── */
 .pillar-logo-box {
-  margin-bottom: 64px !important;
+  margin-bottom: 36px !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,8 +56,7 @@
   gap: 14px;
   width: 100%;
   align-items: center;
-  overflow-y: auto;
-  overflow-x: visible;
+  overflow: visible;
   padding: 16px 16px 0;
 }
 
@@ -182,4 +181,11 @@
   color: var(--crimson-risk);
   background: var(--crimson-risk-g);
   border-color: rgba(185,28,28,0.3);
+}
+
+/* Hide Sidebar on Mobile */
+@media (max-width: 768px) {
+  .pillar-capsule {
+    display: none !important;
+  }
 }

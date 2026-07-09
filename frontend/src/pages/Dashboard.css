@@ -882,4 +882,15 @@
   .vault-span-2 {
     grid-column: span 1;
   }
+
+  .wealth-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .wealth-top-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
 }

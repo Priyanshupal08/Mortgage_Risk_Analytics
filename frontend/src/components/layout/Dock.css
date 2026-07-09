@@ -112,3 +112,38 @@
   box-shadow: 0 0 8px var(--danger);
   opacity: 1;
 }
+
+/* Hide Dock on Desktop */
+@media (min-width: 769px) {
+  .dock-container {
+    display: none !important;
+  }
+}
+
+/* Make Dock compact on small mobile viewports */
+@media (max-width: 500px) {
+  .dock-container {
+    bottom: 16px;
+  }
+  .dock {
+    gap: 4px;
+    padding: 8px 10px;
+    border-radius: 18px;
+  }
+  .dock-item {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+  .dock-item::after {
+    bottom: -4px;
+  }
+  .dock-icon-wrapper svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  .dock-divider {
+    height: 24px;
+    margin: 0 4px;
+  }
+}

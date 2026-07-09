@@ -1,0 +1,30 @@
+/* ╔═════════════════════════════════════════════════════════════════════════╗
+   ║   MERIDIAN SYSTEM LAYOUT & RESPONSIVE GRID                              ║
+   ╚═════════════════════════════════════════════════════════════════════════╝ */
+
+.meridian-layout-root {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.meridian-main {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+  z-index: 10;
+  padding: 24px 36px 36px 12px;
+}
+
+/* Responsive Breakpoint for Mobile and Tablet viewports */
+@media (max-width: 768px) {
+  .meridian-layout-root {
+    flex-direction: column;
+  }
+  
+  .meridian-main {
+    padding: 16px 16px 120px 16px; /* Reduced side padding, added bottom padding for the Dock */
+  }
+}

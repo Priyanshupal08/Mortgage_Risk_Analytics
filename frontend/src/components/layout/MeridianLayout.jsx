@@ -3,20 +3,16 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import AlabasterAmbientBackground from '../3d/SceneBackground';
 import FloatingAlabasterPillar from './MeridianSidebar';
+import Dock from './Dock';
+import './MeridianLayout.css';
 
 export default function MeridianLayout() {
   const location = useLocation();
   return (
-    <div style={{ display:'flex', width:'100vw', height:'100vh', overflow:'hidden', position:'relative' }}>
+    <div className="meridian-layout-root">
       <AlabasterAmbientBackground />
       <FloatingAlabasterPillar />
-      <main style={{
-        flex: 1,
-        overflow: 'auto',
-        position: 'relative',
-        zIndex: 10,
-        padding: '24px 36px 36px 12px',
-      }}>
+      <main className="meridian-main">
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}
@@ -29,6 +25,7 @@ export default function MeridianLayout() {
           </motion.div>
         </AnimatePresence>
       </main>
+      <Dock />
     </div>
   );
 }

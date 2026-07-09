@@ -170,7 +170,7 @@
 /* ── Content Grid ──────────────────────────────────────────────────────── */
 .profile-content-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 28px;
 }
 
@@ -613,4 +613,40 @@ input:checked+.slider:before {
 .cancel-btn:hover {
   background: rgba(17, 24, 39, 0.06);
   border-color: rgba(17, 24, 39, 0.2);
+}
+
+/* Responsive adjustments for Profile Page on Mobile screens */
+@media (max-width: 768px) {
+  .profile-info-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    margin-top: -85px;
+    padding: 0 20px 24px;
+  }
+  
+  .profile-avatar-large {
+    width: 130px;
+    height: 130px;
+    font-size: 3.5rem;
+    border-width: 6px;
+  }
+
+  .profile-name-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .profile-name-details h1 {
+    font-size: 2.2rem;
+  }
+
+  .profile-badges {
+    justify-content: center;
+  }
+
+  .profile-cover {
+    height: 150px;
+  }
 }
