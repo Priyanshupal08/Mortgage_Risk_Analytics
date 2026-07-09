@@ -225,10 +225,10 @@
 
 .vault-num {
   font-family: var(--ff-display);
-  font-size: 60px;
+  font-size: clamp(28px, 2.4vw, 42px);
   font-weight: 800;
   letter-spacing: -0.03em;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .vault-sub-bar {
@@ -273,6 +273,7 @@
   justify-content: space-between;
   gap: 16px;
   margin: 24px 0;
+  flex-wrap: wrap;
 }
 
 .vault-sub-text {

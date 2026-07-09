@@ -395,7 +395,7 @@ const MonteCarlo3D = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 w-full md:w-auto">
             {viewButtons.map((view) => (
               <button
                 key={view.key}

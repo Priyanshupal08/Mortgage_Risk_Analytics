@@ -382,7 +382,7 @@ const ModelComparison = () => {
             <div style={{ textAlign: 'right', minWidth: '140px' }}>
               <div style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--ink-sec)', fontWeight: 700, marginBottom: '6px' }}>Models Approved</div>
               <div style={{ fontSize: '32px', fontWeight: 800, fontFamily: 'var(--ff-mono)', color: 'var(--royal-gold)', lineHeight: 1 }}>
-                {results.consensus.disagreement_count} <span style={{ fontSize: '22px', color: 'var(--ink-muted)', fontWeight: 600 }}>/ 3</span>
+                {results.consensus.models_agreeing_approve} <span style={{ fontSize: '22px', color: 'var(--ink-muted)', fontWeight: 600 }}>/ {Object.keys(results.models).length}</span>
               </div>
             </div>
           </div>
