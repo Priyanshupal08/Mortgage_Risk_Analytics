@@ -395,12 +395,12 @@ const MonteCarlo3D = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 w-full md:w-auto">
+          <div className="flex flex-col md:flex-row items-stretch md:items-center gap-2 w-full md:w-auto">
             {viewButtons.map((view) => (
               <button
                 key={view.key}
                 onClick={() => setActiveView(view.key)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-2 ${
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center justify-center gap-2 w-full md:w-auto ${
                   activeView === view.key
                     ? 'bg-amber-500 text-slate-900'
                     : 'bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700'
